@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffd1e8, #fff0f7);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  text-align: center;
+  padding: 30px;
+}
+
+.page.active {
+  display: block;
+}
+
+h1, h2 {
+  margin: 15px 0;
+}
+
+p {
+  margin: 8px 0;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  background: #ff69b4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.no {
+  background: #ccc;
+  color: #333;
+  position: relative;
+}
+
+/* BEAR */
+.bear {
+  width: 120px;
+  height: 120px;
+  background: #d9a66c;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.ear {
+  width: 40px;
+  height: 40px;
+  background: #d9a66c;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+}
+
+.ear.left { left: -10px; }
+.ear.right { right: -10px; }
+
+.eye {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 45px;
+}
+
+.eye.left { left: 35px; }
+.eye.right { right: 35px; }
+
+.blush {
+  width: 15px;
+  height: 8px;
+  background: pink;
+  border-radius: 50%;
+  position: absolute;
+  top: 65px;
+}
+
+.blush.left { left: 25px; }
+.blush.right { right: 25px; }
+
+.nose {
+  width: 14px;
+  height: 10px;
+  background: brown;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 53px;
+}
+
+/* Hearts */
+.heart {
+  font-size: 30px;
+  animation: float 3s infinite alternate;
+}
+
+.hearts::after {
+  content: "💖 💕 💞 💗";
+  position: absolute;
+  font-size: 30px;
+  animation: float 6s infinite linear;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* Car */
+#car {
+  position: fixed;
+  bottom: 20px;
+  left: -80px;
+  font-size: 40px;
+}
+
+.move {
+  animation: drive 0.8s forwards;
+}
+
+@keyframes drive {
+  to { left: 110%; }
+}
